@@ -1,15 +1,14 @@
 import { Mail, Phone, Linkedin, MapPin, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <footer className="bg-foreground text-background py-16">
+  return <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
@@ -22,20 +21,12 @@ const Footer = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
-                  <a 
-                    href="mailto:drishtikori@email.com"
-                    className="hover:text-primary transition-colors"
-                  >
-                    drishtikori@email.com
-                  </a>
+                  <a href="mailto:drishtikori@email.com" className="hover:text-primary transition-colors">drishtikori4@email.com</a>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
-                  <a 
-                    href="tel:+91XXXXXXXXXX"
-                    className="hover:text-primary transition-colors"
-                  >
+                  <a href="tel:+91XXXXXXXXXX" className="hover:text-primary transition-colors">
                     +91 XXXX-XXX-XXX
                   </a>
                 </div>
@@ -47,12 +38,7 @@ const Footer = () => {
                 
                 <div className="flex items-center gap-3">
                   <Linkedin className="h-5 w-5 text-primary" />
-                  <a 
-                    href="https://linkedin.com/in/drishtikori"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
-                  >
+                  <a href="https://linkedin.com/in/drishtikori" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                     LinkedIn Profile
                   </a>
                 </div>
@@ -65,28 +51,24 @@ const Footer = () => {
                 Quick Links
               </h3>
               <div className="space-y-3">
-                <button
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block hover:text-primary transition-colors text-left"
-                >
+                <button onClick={() => document.getElementById('about')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block hover:text-primary transition-colors text-left">
                   About Me
                 </button>
-                <button
-                  onClick={() => document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block hover:text-primary transition-colors text-left"
-                >
+                <button onClick={() => document.getElementById('education')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block hover:text-primary transition-colors text-left">
                   Education
                 </button>
-                <button
-                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block hover:text-primary transition-colors text-left"
-                >
+                <button onClick={() => document.getElementById('projects')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block hover:text-primary transition-colors text-left">
                   Projects
                 </button>
-                <button
-                  onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block hover:text-primary transition-colors text-left"
-                >
+                <button onClick={() => document.getElementById('skills')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block hover:text-primary transition-colors text-left">
                   Skills
                 </button>
               </div>
@@ -111,12 +93,7 @@ const Footer = () => {
                 </Button>
                 
                 <Button variant="outline" asChild className="w-full hover-lift bg-white/10 border-white/20 text-white hover:bg-white/20">
-                  <a 
-                    href="https://linkedin.com/in/drishtikori" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
+                  <a href="https://linkedin.com/in/drishtikori" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                     <Linkedin className="h-4 w-4" />
                     Connect on LinkedIn
                   </a>
@@ -138,17 +115,12 @@ const Footer = () => {
               </span>
             </div>
             
-            <button
-              onClick={scrollToTop}
-              className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2"
-            >
+            <button onClick={scrollToTop} className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2">
               Back to Top ↑
             </button>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

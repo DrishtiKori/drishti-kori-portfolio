@@ -1,22 +1,20 @@
 import { ArrowDown, Mail, Linkedin, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
-
 const Hero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }}>
         <div className="absolute inset-0 gradient-hero opacity-90"></div>
       </div>
 
@@ -24,12 +22,12 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Drishti Kori
-          </h1>
+
+
+
+Drishti Kori</h1>
           
-          <div className="text-xl md:text-2xl mb-4 font-medium opacity-90">
-            Data Science | Machine Learning | AI Enthusiast
-          </div>
+          <div className="text-xl md:text-2xl mb-4 font-medium opacity-90">Data Science | Machine Learning</div>
           
           <div className="flex items-center justify-center gap-2 mb-8 text-lg opacity-80">
             <MapPin className="h-5 w-5" />
@@ -66,11 +64,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <button
-            onClick={scrollToAbout}
-            className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110"
-            aria-label="Scroll to about section"
-          >
+          <button onClick={scrollToAbout} className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110" aria-label="Scroll to about section">
             <ArrowDown className="h-6 w-6 animate-bounce" />
           </button>
         </div>
@@ -78,8 +72,6 @@ const Hero = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

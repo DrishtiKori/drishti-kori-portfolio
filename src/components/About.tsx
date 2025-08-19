@@ -1,8 +1,6 @@
 import profileImg from '/lovable-uploads/28e95598-1822-4ef1-9d5c-4b45f08eaaaf.png';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-gradient-soft">
+  return <section id="about" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
@@ -17,11 +15,7 @@ const About = () => {
             <div className="flex justify-center lg:justify-start animate-slide-up">
               <div className="relative">
                 <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-soft hover-lift">
-                  <img
-                    src={profileImg}
-                    alt="Drishti Kori - Data Science Enthusiast"
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <img src={profileImg} alt="Drishti Kori - Data Science Enthusiast" className="w-full h-full object-cover object-center" />
                 </div>
                 {/* Decorative Element */}
                 <div className="absolute -z-10 top-6 left-6 w-80 h-80 rounded-2xl bg-primary/10"></div>
@@ -58,7 +52,7 @@ const About = () => {
                   
                   <div className="bg-card p-4 rounded-lg shadow-card hover-lift">
                     <h4 className="font-semibold text-primary mb-2">Certifications</h4>
-                    <p className="text-sm text-muted-foreground">Data Science & Generative AI</p>
+                    <p className="text-sm text-muted-foreground">Data Science</p>
                   </div>
                   
                   <div className="bg-card p-4 rounded-lg shadow-card hover-lift">
@@ -76,8 +70,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
